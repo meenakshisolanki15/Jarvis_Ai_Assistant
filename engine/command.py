@@ -41,12 +41,12 @@ def takecommand():
 @eel.expose
 def allCommands(message=1):
 
-    if message ==1:
+    if message == 1:
         query = takecommand()
         print(query)
         eel.senderText(query)
     else:
-        query=message
+        query = message
         eel.senderText(query)
 
     try:
@@ -54,7 +54,7 @@ def allCommands(message=1):
         if "open" in query:
             from engine.features import openCommand
             openCommand(query)
-        elif "on youtube" in query:
+        elif "on Youtube" in query:
             from engine.features import PlayYoutube
             PlayYoutube(query)
 
